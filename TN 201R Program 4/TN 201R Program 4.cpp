@@ -10,16 +10,17 @@ int main()
 {
 	bool running = true;
 	vector<string> wordList;
-	cards trueDeck[52];
+	vector<cards> trueDeck;
 	loadTrueDeck(trueDeck);
 	loadWords(wordList);
 	while (running) {
+		vector<cards> nDeck;
+		shuffleDeck(trueDeck, nDeck);
 		char choice;
 		cout << "Games List" << endl;
 		cout << "B - Blackjack" << endl;
 		cout << "C - Craps" << endl;
 		cout << "H - Hangman" << endl;
-		cout << "T - TicTacToe" << endl;
 		cout << "W - War" << endl;
 		cout << "Q - Quit" << endl;
 		cout << "What game would you like to play?" << endl << endl;
@@ -27,7 +28,7 @@ int main()
 		choice = toupper(choice);
 		switch (choice) {
 		case 'B':
-			playBlackJack();
+			playBlackJack(trueDeck);
 			break;
 		case 'C':
 			playCraps();
@@ -35,11 +36,8 @@ int main()
 		case 'H':
 			playHangman(wordList);
 			break;
-		case 'T':
-			playTicTacToe();
-			break;
 		case 'W':
-			playWar();
+			playWar(trueDeck);
 			break;
 		case 'Q':
 			running = false;

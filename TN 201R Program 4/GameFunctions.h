@@ -5,23 +5,24 @@ using namespace std;
 
 struct cards {
 	string name;
+	char suit;
 	int value;
 };
 
-void loadTrueDeck(cards arr[]);
+void loadTrueDeck(vector<cards>& );
 
-void loadRandDeck(cards arr[], vector<cards> newDeck);
+void shuffleDeck(vector<cards> tDeck, vector<cards>& newDeck);
 
 void printHand(vector<cards> hand);
 
 void loadWords(vector<string>&);
 
-void playBlackJack();
+void playBlackJack(vector<cards>);
+
+int totalHand(vector<cards>);
 
 void playCraps();
 
 void playHangman(vector<string>);
 
-void playTicTacToe();
-
-void playWar();
+void playWar(vector<cards>);
