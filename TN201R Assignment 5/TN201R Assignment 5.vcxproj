@@ -130,16 +130,21 @@
     <ClCompile Include="BasketballPlayer.cpp" />
     <ClCompile Include="BasketballPlayerCollege.cpp" />
     <ClCompile Include="BasketballPlayerPro.cpp" />
+    <ClCompile Include="Functions.cpp" />
     <ClCompile Include="TN201R Assignment 5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasketballPlayer.h" />
     <ClInclude Include="BasketballPlayerCollege.h" />
     <ClInclude Include="BasketballPlayerPro.h" />
+    <ClInclude Include="Functions.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="playerStatsNCAA.csv" />
     <None Include="playerStatsPRO.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ErrorOutput.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

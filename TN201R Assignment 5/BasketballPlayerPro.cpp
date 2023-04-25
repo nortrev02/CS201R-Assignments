@@ -8,6 +8,9 @@ BasketballPlayerPro::BasketballPlayerPro() : BasketballPlayer() {
 
 BasketballPlayerPro::BasketballPlayerPro(char pType, string pName, int ga, float ef, int tr, int as, int st, int bl, int to, int pt, int ye, string pos) : BasketballPlayer(pType, pName, ga, ef, tr, as, st, bl, to, pt) {
 	years = ye;
+	if (years < 0) {
+		years = 0;
+	}
 	position = pos;
 	setValue();
 	setContractValue();

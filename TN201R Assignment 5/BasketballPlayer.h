@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 using namespace std;
 
 class BasketballPlayer {
@@ -42,5 +43,5 @@ public:
 	int getPTS() { return pts; }
 	float getEffRating() { return effRating; }
 	int getValue() { return value; }
-	virtual void print();
+	virtual void print() = 0;
 };
