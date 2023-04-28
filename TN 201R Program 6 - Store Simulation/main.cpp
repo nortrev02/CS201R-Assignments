@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdlib>
 #include "linkedList.h"
 #include "queue.h"
 #include "queueData.h"
@@ -20,8 +19,9 @@ int main() {
 
 	// All data initialized above. Below is main loop for the program.
 
+	double minutes = 0.0;
 	while (running) {
-		for (int minutes = 0; minutes < 720; minutes++) {
+		if (minutes < 720.0) {
 			int newCustomers = rand() % 3 + 1;
 		}
 	}

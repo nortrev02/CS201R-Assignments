@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 using namespace std;
 
 struct queueNodeData {
@@ -13,9 +14,12 @@ struct queueNode {
 
 class queue {
 private:
+	static queue* head;
 	
 	
 public:
+	void setFront();
+	queue* getFront();
 	queue();
 	void enQueue(queueNodeData); //add the queueNodeData item to the end of the queue
 	queueNodeData deQueue(); //remove a queueNodeData item from the front of the queue

@@ -15,3 +15,7 @@ queueNodeData queue::peek() {
 bool queue::queueEmpty() {
 
 }
+
+void queue::printQueue() {
+
+}
