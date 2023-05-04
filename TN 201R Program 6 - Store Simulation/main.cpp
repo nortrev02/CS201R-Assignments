@@ -16,13 +16,22 @@ int main() {
 	cin >> cashiersNum; // validate input later. im tired
 	cashiers.resize(cashiersNum);
 	cashierData.resize(cashiersNum);
+	double minutes = 0.0;
+	int CartsUsed = 0;
+	linkedList InTheStore;
 
 	// All data initialized above. Below is main loop for the program.
-
-	double minutes = 0.0;
+	
 	while (running) {
-		if (minutes < 720.0) {
-			int newCustomers = rand() % 3 + 1;
+		int newCustomers;
+		if (minutes < 720.0s) {
+			newCustomers = rand() % 3 + 1;
+		}
+		for (int i = 0; i < newCustomers; i++) { // The "Constructor" for new customers. Passed to linked list.
+			CartsUsed++;
+			listItem Temp;
+
+			InTheStore.addElement(Temp);
 		}
 	}
 }

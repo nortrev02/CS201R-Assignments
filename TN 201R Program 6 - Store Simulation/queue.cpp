@@ -7,6 +7,7 @@ void queue::enQueue(queueNodeData) {
 
 }
 queueNodeData queue::deQueue() {
+	queueNodeData next = *front;
 
 }
 queueNodeData queue::peek() {

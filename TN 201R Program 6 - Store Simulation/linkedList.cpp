@@ -1,33 +1,39 @@
 #include "linkedList.h"
 
-linkedList::linkedList() {
-	srand(time(0));
-	CustomerData.cartId = 0; // FIX IMPLEMENTATION LATER
-
-	CustomerData.itemCount = 
-	CustomerData.enterQTime = 0;
-	CustomerData.exitQTime = 0;
-	LLData.data = CustomerData;
-	LLData.nextPtr = nullptr;
-
+linkedList::linkedList() { // UNFINISHED
+	
 }
 
-void linkedList::addElement(listType) {
+void linkedList::addElement(listItem adding) { // UNFINISHED
+	listCount++;
+	if (headPtr == nullptr) {
+		headPtr = &adding;
+	}
+	else {
+		listItem* traversing = headPtr;
+		while (traversing != nullptr) {
 
+		}
+	}
 }
 
-listType linkedList::peek() {
-
+void linkedList::delElement() { // UNFINISHED
+	listCount--;
 }
 
-void linkedList::delElement() {
-
-}
-
-void linkedList::printList() {
-
+void linkedList::printList() { // UNFINISHED
+	listItem* traversing = headPtr;
+	while (traversing != nullptr) {
+		cout << "Printing unfinished" << endl;
+		traversing = traversing->nextItem;
+	}
 }
 
 bool linkedList::listIsEmpty() {
-
+	if (headPtr == nullptr) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }

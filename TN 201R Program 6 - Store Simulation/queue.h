@@ -3,23 +3,18 @@
 using namespace std;
 
 struct queueNodeData {
-		int timeAvailable; //clock time when current customer is dequeued
-		int itemCount; //the number of items for current customer
-	};
-
-struct queueNode {
-		queueNodeData data;
-		queueNode* nextPtr;
-	};
+	int timeAvailable; //clock time when current customer is dequeued
+	int itemCount; //the number of items for current customer
+	queueNodeData* next;
+};
 
 class queue {
 private:
-	static queue* head;
-	
+	queueNodeData* front;
+	queueNodeData* rear;
+	queueNodeData data;
 	
 public:
-	void setFront();
-	queue* getFront();
 	queue();
 	void enQueue(queueNodeData); //add the queueNodeData item to the end of the queue
 	queueNodeData deQueue(); //remove a queueNodeData item from the front of the queue
