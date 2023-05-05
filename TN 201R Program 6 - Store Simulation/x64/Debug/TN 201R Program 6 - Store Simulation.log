@@ -1,4 +1,7 @@
-﻿  main.cpp
-C:\Users\starf\Documents\CS201R-Assignments\TN 201R Program 6 - Store Simulation\main.cpp(9,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  LINK : C:\Users\starf\Documents\CS201R-Assignments\TN 201R Program 6 - Store Simulation\x64\Debug\TN 201R Program 6 - Store Simulation.exe not found or not built by the last incremental link; performing full link
-  TN 201R Program 6 - Store Simulation.vcxproj -> C:\Users\starf\Documents\CS201R-Assignments\TN 201R Program 6 - Store Simulation\x64\Debug\TN 201R Program 6 - Store Simulation.exe
+﻿  linkedList.cpp
+  main.cpp
+C:\Users\starf\OneDrive\CS201R-Assignments\TN 201R Program 6 - Store Simulation\main.cpp(8,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  queue.cpp
+  Generating Code...
+  LINK : C:\Users\starf\OneDrive\CS201R-Assignments\TN 201R Program 6 - Store Simulation\x64\Debug\TN 201R Program 6 - Store Simulation.exe not found or not built by the last incremental link; performing full link
+  TN 201R Program 6 - Store Simulation.vcxproj -> C:\Users\starf\OneDrive\CS201R-Assignments\TN 201R Program 6 - Store Simulation\x64\Debug\TN 201R Program 6 - Store Simulation.exe

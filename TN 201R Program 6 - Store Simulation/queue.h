@@ -10,15 +10,16 @@ struct queueNodeData {
 
 class queue {
 private:
+	int numPpl;
 	queueNodeData* front;
 	queueNodeData* rear;
-	queueNodeData data;
 	
 public:
 	queue();
 	void enQueue(queueNodeData); //add the queueNodeData item to the end of the queue
-	queueNodeData deQueue(); //remove a queueNodeData item from the front of the queue
+	void deQueue(); //remove a queueNodeData item from the front of the queue
 	queueNodeData peek(); //return the contents of the front of the queue (but do not remove)
 	bool queueEmpty(); //return true if the queue is empty (front = nullptr?), false otherwise
 	void printQueue();
+	int howMany() { return numPpl; }
 };
