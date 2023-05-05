@@ -22,7 +22,7 @@ listItem linkedList::peek() { // peek to get info on the next customer to finish
 	return *headPtr;
 }
 
-void linkedList::delElement() { // if the customer finished shopping, execute this function.
+void linkedList::delElement() { // if the customer finished shopping, execute this function. (this check performed in main function)
 	listCount--;
 	listItem* deleting = headPtr;
 	headPtr = headPtr->nextItem;

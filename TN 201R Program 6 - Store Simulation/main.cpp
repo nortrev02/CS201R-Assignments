@@ -14,8 +14,21 @@ int verifyNum(int min, int max) {
 	return final;
 }
 
-listItem initListItem() {
-
+void initListItem(listItem& newItem, int cartNum) {
+	newItem.cartId = cartNum;
+	int random1 = rand() % 10;
+	if (random1 == 0) {
+		newItem.itemCount = rand() % 30 + 31;
+	}
+	else if (random1 <= 2) {
+		newItem.itemCount = rand() % 10 + 21;
+	}
+	else if (random1 <= 5) {
+		newItem.itemCount = rand() % 10 + 11;
+	}
+	else {
+		newItem.itemCount = rand() % 10 + 1;
+	}
 }
 
 queueNodeData initQueueNodeData() {
@@ -43,7 +56,9 @@ int main() {
 	// All data initialized above. Below is main loop for the program.
 	
 	//while (running) { // commented out for debugging purposes
-	//	if (linkedList.peek().enter
+	//	if (linkedList.peek().enterQTime == minutes){
+	//  
+	//  }
 	//	int newCustomers;
 	//	if (minutes < 720.0) {
 	//		newCustomers = rand() % 3 + 1;
@@ -51,7 +66,7 @@ int main() {
 	//	for (int i = 0; i < newCustomers; i++) { // The "Constructor" for new customers. Passed to linked list.
 	//		CartsUsed++;
 	//		listItem Temp;
-
+	//		initListItem(Temp, CartsUsed);
 	//		InTheStore.addElement(Temp);
 	//	}
 	//}
