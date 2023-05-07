@@ -14,7 +14,7 @@ int verifyNum(int min, int max) {
 	return final;
 }
 
-void initListItem(listItem& newItem, int cartNum) {
+void initListItem(listItem& newItem, int cartNum, const int CurrTime) {
 	newItem.cartId = cartNum;
 	int random1 = rand() % 10;
 	if (random1 == 0) {
@@ -29,9 +29,13 @@ void initListItem(listItem& newItem, int cartNum) {
 	else {
 		newItem.itemCount = rand() % 10 + 1;
 	}
+	newItem.enterQTime = CurrTime;
+	for (int i = 0; i < newItem.itemCount; i++) {
+		newItem.enterQTime += rand() % 31 + 30;
+	}
 }
 
-queueNodeData initQueueNodeData() {
+void initQueueNodeData(queueNodeData& newItem, listItem oldItem, const int CurrTime) {
 
 }
 
@@ -49,25 +53,28 @@ int main() {
 	cashiers.resize(cashiersNum);
 	cashierData.resize(cashiersNum);
 	cartsHelped.resize(cashiersNum);
-	double minutes = 0.0;
+	int seconds = 0; // seconds used instead of minutes for more accurate simulation
 	int CartsUsed = 0;
 	linkedList InTheStore;
 
 	// All data initialized above. Below is main loop for the program.
 	
-	//while (running) { // commented out for debugging purposes
-	//	if (linkedList.peek().enterQTime == minutes){
-	//  
-	//  }
-	//	int newCustomers;
-	//	if (minutes < 720.0) {
-	//		newCustomers = rand() % 3 + 1;
-	//	}
-	//	for (int i = 0; i < newCustomers; i++) { // The "Constructor" for new customers. Passed to linked list.
-	//		CartsUsed++;
-	//		listItem Temp;
-	//		initListItem(Temp, CartsUsed);
-	//		InTheStore.addElement(Temp);
-	//	}
-	//}
+	while (running) { // commented out for debugging purposes
+		if (seconds < 43200 && seconds % 60 == 0) { // adds new customers to the store.
+			 int newCustomers = rand() % 3 + 1;
+			for (int i = 0; i < newCustomers; i++) { // The "Constructor" for new customers. Passed to linked list.
+				CartsUsed++;
+				listItem Temp;
+				initListItem(Temp, CartsUsed, seconds);
+				InTheStore.addElement(Temp);
+			}
+		}
+		if (InTheStore.peek().enterQTime == seconds){ // remove customer from list, add to a queue
+			queueNodeData temp;
+			initQueueNodeData(temp, InTheStore.peek(), seconds);
+			InTheStore.delElement();
+			
+		}
+		seconds++;
+	}
 }

@@ -7,7 +7,6 @@ struct listItem {
 	int cartId = 0; //unique id assigned
 	int itemCount = 0; //amount of items generated
 	int enterQTime = 0; //current ‘time’ + shopping time
-	int exitQTime = 0; //enterQTime + checkout time
 	listItem* nextItem = nullptr;
 };
 
